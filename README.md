@@ -14,7 +14,9 @@ Figure 1: Daily active cases in Australia split into two waves.
 An SIR model was chosen to model Australia’s COVID-19 outbreak. See Figure 2 for a flow chart of this model. The model is comprised of three ordinary differential equations.
  
 (1)           dS/dt= -βSI,           So = S(0)
+
 (2)           dI/dt=βSI- γI,      I¬o = I(0)
+
 (3)           dR/dt= γI,                Ro = R(0)
  
 Figure 2: Flow chart of the SIR model.
@@ -29,7 +31,9 @@ To reiterate, the two time intervals in question were fit separately for each of
 Figure 3: Plots of the fitted data with respect to the observed data for the two, four, and five parameter models respectively.
 
 At a glance, the 2-paramter model was the worst fit, meaning the fitted curve deviates considerable from the observed data. The 5-parameter model has the best fit, meaning that the fitted curve falls does not deviate far for the observed data of daily active cases. However, a greater precision in analysis is required. To mathematically analyze the fit of the three models described above, tools such as the AIC and relative probability will be used. AIC is a measure of the “goodness of fit” of a model, where a lower AIC is indicative of a better model. AIC is be modelled by equation (4).
+
 (4)          AIC = nln(SSE/n) + 2P
+
 Where n is the number of observations, SSE is the model error and P is the number of parameters. A low SSE will result in a better AIC, yet the addition of parameters will not raise the SSE, thus risk of overfitting must be taken into consideration. As such, AIC has a built-in component that penalizes models for the occurrence of many predictors. The relative probability is proportional to the probability that a given model in question is the best model. See Figure 4 for a summary of the results and Figure 5 for the plot of the AIC values.
     
 Figure 4: Summary tables of the AIC and relative probability for each model in each time interval respectively.
